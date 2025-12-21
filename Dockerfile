@@ -5,4 +5,4 @@ RUN npm install && npm run generate
 
 FROM nginxinc/nginx-unprivileged:alpine
 COPY --from=builder /app/.output/public /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 8080
