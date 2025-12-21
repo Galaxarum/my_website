@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@import "./scrollbars.css";
+
+body{
+    height: 100vh;
+}
+
+#__nuxt{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

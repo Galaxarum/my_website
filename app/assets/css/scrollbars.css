@@ -1,0 +1,25 @@
+
+@layer base {
+    ::-webkit-scrollbar {
+        @apply w-1.5 h-1.5;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        /* Utilizza la variabile neutral definita in app.config.ts */
+        background-color: var(--ui-color-neutral-300);
+        @apply rounded-full;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+        background-color: var(--ui-color-neutral-700);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        /* Utilizza la variabile primary definita in app.config.ts */
+        background-color: var(--ui-color-primary-500);
+    }
+}
