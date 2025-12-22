@@ -24,6 +24,7 @@ const papers = computed(()=>response?.group?.map((o)=>({
 <template>
   <UPageList>
     <UPageCard v-for="p of papers"
+               variant="subtle"
                :description="p.venue"
                :to="p.url"
                :ui="{body: 'w-full',title: 'w-full'}"

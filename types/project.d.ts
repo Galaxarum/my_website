@@ -5,6 +5,7 @@ declare type ProjectT = {
     side: boolean,
     link?: string,
     image?: string,
+    icon?: string,
     year_from?: number
     year_to?: number
 }
