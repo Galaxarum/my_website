@@ -14,6 +14,10 @@ const items = [
     to: '/tech',
   },
   {
+    label: 'Publications',
+    to: '/publications',
+  },
+  {
     label: 'Side-projects',
     to: '/side',
   }
