@@ -1,12 +1,7 @@
 <script setup lang="ts">
-const {project} = defineProps<{ project: Project }>();
+const {project} = defineProps<{ project: ProjectT }>();
 
-const projectSpan = computed(() => {
-  if(project.year_span==null) return ''
-  if(!Array.isArray(project.year_span))
-    project.year_span = [project.year_span, new Date().getFullYear()];
-  return project.year_span.join(' - ');
-})
+const projectSpan = project.year_from? `${project.year_from} - ${project.year_to ?? new Date().getFullYear()}` : ''
 </script>
 
 <template>
@@ -15,9 +10,7 @@ const projectSpan = computed(() => {
              :title="project.title"
              :description="project.description"
   >
-    <template #default>
-      <NuxtImg :src="project.img" :alt="'Logo of ' + project.title" placeholder/>
-    </template>
+    <NuxtImg v-if="project.image" :src="project.image" :alt="'Logo of ' + project.title" placeholder/>
     <template #footer>
       {{projectSpan}}
     </template>

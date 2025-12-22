@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   ssr: true,
-  modules: ['@nuxt/ui', '@nuxt/image'],
+  modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/content'],
   css: ['@/assets/css/main.css'],
+  typescript: {
+    tsConfig: {
+      include: ['../types/**/*.d.ts']
+    }
+  }
 })

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 
-const projects = ref<Project[]>([
+const projects = ref<ProjectT[]>([
   {
     title: 'Sfera S.r.l. web development',
     description: 'Full-stack web development of the website of the society "Sfera S.r.l".',
     link: 'https://sfera.bio/',
-    img: 'https://sfera.bio/logo.png',
+    image: 'https://sfera.bio/logo.png',
     year_span: 2020
   }
 
@@ -14,7 +14,7 @@ const projects = ref<Project[]>([
 </script>
 
 <template>
-  <UPageColumns class="p-6">
+  <UPageColumns>
     <Project v-for="p of projects" :project="p"></Project>
   </UPageColumns>
 </template>

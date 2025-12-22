@@ -6,6 +6,10 @@ const items = [
     to: '/',
   },
   {
+    label: 'Projects',
+    to: '/projects'
+  },
+  {
     label: 'MultiSensory Environments',
     to: '/mse',
   },
