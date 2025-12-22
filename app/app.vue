@@ -1,38 +1,49 @@
 <script setup lang="ts">
-
 const items = [
   {
-    label: 'About',
+    label: 'About me',
     to: '/',
   },
   {
     label: 'Projects',
-    to: '/projects'
+    children: [
+
+    ]
   },
   {
-    label: 'MultiSensory Environments',
-    to: '/mse',
-  },
-  {
-    label: 'Technology',
-    to: '/tech',
+    label: 'Research',
+    to: '/research',
+    children: [
+      {
+        label: 'MultiSensory Environments',
+        to: '/research/mse',
+      },
+      {
+        label: 'Technology',
+        to: '/research/tech',
+      },
+      {
+        label: 'Other applications',
+        to: '/research/other',
+      }
+    ]
   },
   {
     label: 'Publications',
     to: '/publications',
   },
   {
-    label: 'Side-projects',
-    to: '/side',
+    label: 'Side quests',
+    to: '/side'
   }
-]
+];
 </script>
 <template>
   <UApp>
-    <UHeader title="Matteo Secco" class="flex-none">
+    <UHeader :title="$route.path==='/'?null:'Matteo Secco'" class="flex-none">
       <template #right>
         <UNavigationMenu :items="items" class="hidden lg:flex"/>
-        <UColorModeSwitch/>
+        <UColorModeButton/>
       </template>
       <template #body>
         <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
