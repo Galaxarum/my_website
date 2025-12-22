@@ -24,7 +24,7 @@ const items = [
     <UHeader title="Matteo Secco" class="flex-none">
       <template #right>
         <UNavigationMenu :items="items" class="hidden lg:flex"/>
-        <UColorModeButton/>
+        <UColorModeSwitch/>
       </template>
       <template #body>
         <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
