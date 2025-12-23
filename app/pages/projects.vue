@@ -3,9 +3,9 @@ const allProjects = useProjects()
 </script>
 
 <template>
-  <UPageGrid>
+  <UPageColumns>
     <Project v-for="project of allProjects" :key="project.title" :project="project" />
-  </UPageGrid>
+  </UPageColumns>
 </template>
 
 <style scoped>

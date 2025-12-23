@@ -27,8 +27,12 @@ const avatar = project.icon==null?undefined:{
       >
       </UUser>
     </template>
-    <NuxtImg v-if="project.image" :src="project.image" :alt="`Image of ${project.title} project`" placeholder placeholder-class="aspect-video"/>
-    {{projectSpan}}
+    <template #body>
+      <NuxtImg v-if="project.image" :src="project.image" :alt="`Image of ${project.title} project`" height="30vh" placeholder placeholder-class="aspect-video"/>
+    </template>
+    <template #footer>
+      {{projectSpan}}
+    </template>
   </UPageCard>
 </template>
 
