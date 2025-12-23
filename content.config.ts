@@ -12,6 +12,14 @@ export const projectObj = z.object({
     year_from: z.number().int().nullable(),
     year_to: z.number().int().nullable(),
 })
+export const publicationObj = z.object({
+    Name: z.string().nonempty(),
+    DOI: z.string().url().nonempty().nullable(),
+    'Publication Year': z.number().int().nullable(),
+    Venue: z.string().nonempty().nullable(),
+    '🔬 Progetto di ricerca': z.string().nonempty().nullable(),
+    Type: z.string().nullable(),
+})
 
 export default defineContentConfig({
     collections: {
@@ -19,6 +27,11 @@ export default defineContentConfig({
             type: 'data',
             source: 'projects.csv',
             schema:  projectObj
+        }),
+        publications: defineCollection({
+            type: 'data',
+            source: 'publications.csv',
+            schema: publicationObj
         })
     }
 })
