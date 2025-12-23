@@ -11,7 +11,7 @@
              alt="Experimental setup of an augmented climbing activity developed by me"
              preload/>
   </UPageHero>
-  <UPageBody class="px-5">
+  <UPageSection>
 
     My work focuses on Interactive Multisensory Environments and how they can benefit children with NeuroDevelopmental Dysorders.<br>
     Being one of technical background, my main interest is in understanding how these spaces can be enhanced for various goals:
@@ -22,7 +22,7 @@
     <li>Facilitate the adoption of the system by therapeutic centers.</li>
     <li>Studying short and long term benefits induced by these system's usage.</li>
   </ul>
-  </UPageBody>
+  </UPageSection>
 </template>
 
 <style scoped>

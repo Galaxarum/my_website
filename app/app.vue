@@ -10,7 +10,6 @@ const items = [
   },
   {
     label: 'Research',
-    to: '/research',
     children: [
       {
         label: 'MultiSensory Environments',

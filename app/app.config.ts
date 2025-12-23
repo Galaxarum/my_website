@@ -20,6 +20,11 @@ export default defineAppConfig({
         },
         pageList: {
             base: 'p-6 gap-3',
+        },
+        pageHeader: {
+            slots: {
+                root: 'relative border-none py-8 px-5'
+            }
         }
     },
 })
