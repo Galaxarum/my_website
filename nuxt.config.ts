@@ -5,6 +5,14 @@ export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxt/ui','@nuxt/image','@nuxt/content'],
   css: ['@/assets/css/main.css'],
+  content: {
+    build: {
+      csv: {
+        json: true,
+        delimiter: ','
+      }
+    }
+  },
   typescript: {
     tsConfig: {
       include: ['../types/**/*.d.ts']

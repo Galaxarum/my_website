@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('allProjects', () =>
-    queryCollection('projects')
-        .where('side', '<>', 'false')
-        .all()
-)
-const allProjects = computed<ProjectT[]>(() => data.value?.[0]?.meta?.body as ProjectT[])
+const allProjects = useProjects()
 </script>
 
 <template>

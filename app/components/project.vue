@@ -13,7 +13,7 @@ const avatar = project.icon==null?undefined:{
 </script>
 
 <template>
-  <UPageCard variant="subtle"
+  <UPageCard :variant="project.side?'subtle':'ghost'"
              :to="project.link"
              spotlight
              target="_blank"

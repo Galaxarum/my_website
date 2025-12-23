@@ -1,0 +1,1 @@
+declare type ProjectT = z.infer<typeof projectObj>;

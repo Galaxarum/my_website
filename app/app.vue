@@ -6,9 +6,7 @@ const items = [
   },
   {
     label: 'Projects',
-    children: [
-
-    ]
+    to: '/projects'
   },
   {
     label: 'Research',
