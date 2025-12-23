@@ -8,9 +8,10 @@ const papers = await queryCollection<PublicationT>('publications')
 <template>
   <UPageList>
     <UPageCard v-for="p of papers"
-               variant="subtle"
+               variant="soft"
                :description="p.Venue"
                :to="p.DOI"
+               target="_blank"
                :ui="{body: 'w-full',title: 'w-full'}"
     >
       <template #title>

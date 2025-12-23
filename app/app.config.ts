@@ -1,8 +1,13 @@
 export default defineAppConfig({
     ui: {
         colors: {
-            primary: 'indigo',
-            neutral: 'violet',
+            primary: 'slatePrimary',
+            secondary: 'slateSecondary',
+            success: 'slateSuccess',
+            info: 'slateInfo',
+            warning: 'slateWarning',
+            error: 'slateError',
+            neutral: 'slateNeutral'
         },
         main: {
             base: 'min-h-0 h-[calc(100vh-var(--ui-header-height))] overflow-y-auto overflow-x-hidden'

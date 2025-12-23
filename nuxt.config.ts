@@ -5,6 +5,19 @@ export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxt/ui','@nuxt/image','@nuxt/content'],
   css: ['@/assets/css/main.css'],
+  ui: {
+    theme: {
+      colors: [
+        'primary',
+        'secondary',
+        'success',
+        'info',
+        'warning',
+        'error',
+        'neutral'
+      ],
+    },
+  },
   content: {
     build: {
       csv: {
