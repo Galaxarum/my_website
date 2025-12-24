@@ -14,9 +14,18 @@ export const projectObj = z.object({
 
 export default defineContentConfig({
     collections: {
+        pages: defineCollection({
+            type: 'page',
+            source: '*.md',
+            schema: z.object({
+                title: z.string(),
+                description: z.string(),
+                headline: z.string(),
+            })
+        }),
         projects: defineCollection({
             type: 'data',
-            source: 'projects.csv',
+            source: 'projects/*.yml',
             schema:  projectObj
         })
     }

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const allProjects = useProjects()
+const allProjects = await queryCollection('projects')
+    .orWhere(q=>q.where('side','=',false).where('side','IS NULL'))
+    .all()
 </script>
 
 <template>

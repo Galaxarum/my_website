@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const {project} = defineProps<{ project: ProjectT }>();
 
-const projectSpan = project.year_from? `${project.year_from} - ${project.year_to ?? 'Now'}` : ''
+const projectSpan = project.year_from? `${project.year_from} - ${project.year_to ?? 'Present'}` : ''
 const avatar = project.icon==null?undefined:{
   src: `${project.icon}`,
   alt: `Logo of ${project.title} project`,

@@ -1,28 +1,22 @@
 <script setup lang="ts">
-
+const page = await queryCollection('pages').path('/').first()
 </script>
 
 <template>
-  <UPageHero
-      title="Matteo Secco"
-      description="PhD Student @ Politecnico di Milano"
-      orientation="horizontal">
-    <NuxtImg src="/img/hero.jpg"
-             alt="Experimental setup of an augmented climbing activity developed by me"
-             preload/>
-  </UPageHero>
-  <UPageSection>
-
-    My work focuses on Interactive Multisensory Environments and how they can benefit children with NeuroDevelopmental Dysorders.<br>
-    Being one of technical background, my main interest is in understanding how these spaces can be enhanced for various goals:
-  <ul>
-    <li>Improve the children's experience.</li>
-    <li>Expand the available information about the children's internal and external state.</li>
-    <li>Facilitate the usage of the system by healthcare operators.</li>
-    <li>Facilitate the adoption of the system by therapeutic centers.</li>
-    <li>Studying short and long term benefits induced by these system's usage.</li>
-  </ul>
-  </UPageSection>
+  <UPage>
+    <UPageHero
+        :title="page?.title"
+        :description="page?.description"
+        :headline="page?.headline"
+        orientation="horizontal">
+      <NuxtImg src="/img/hero.jpg"
+               alt="Experimental setup of an augmented climbing activity developed by me"
+               preload/>
+    </UPageHero>
+    <UPageSection>
+      <ContentRenderer v-if="page" :value="page"/>
+    </UPageSection>
+  </UPage>
 </template>
 
 <style scoped>
