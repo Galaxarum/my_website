@@ -38,6 +38,13 @@ const { data, status, error } = await useFetch(`https://api.zotero.org/users/${U
 })
 
 const papers = computed(() => data.value?.filter(o => o.year).sort(o=>o.year!))
+
+useSeoMeta({
+  title: 'Publications',
+  ogTitle: 'Publications',
+  description: 'Research publications I written by Matteo Secco',
+  ogDescription: 'Research publications I written by Matteo Secco'
+})
 </script>
 
 <template>

@@ -16,11 +16,13 @@ export default defineContentConfig({
     collections: {
         pages: defineCollection({
             type: 'page',
-            source: '*.md',
+            source: '**/*.md',
             schema: z.object({
                 title: z.string(),
                 description: z.string(),
                 headline: z.string(),
+                image: z.string().url().optional(),
+                image_alt: z.string().optional(),
             })
         }),
         projects: defineCollection({

@@ -1,7 +1,9 @@
 ---
 title: Matteo Secco
-description: PhD Student @ Politecnico di Milano
+description: Researcher of Interactive Multisensory Environment and User Sensing
 headline: PhD Student @ Politecnico di Milano
+image: /img/hero.jpg
+image_alt: Experimental setup of an augmented climbing activity developed by me
 ---
 My work focuses in Interactive Smart Spaces and Mulsisensory environments, and how these systems can benefit children
 with NeuroDevelopmental Disorders and other fragile populations.

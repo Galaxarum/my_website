@@ -5,6 +5,20 @@ export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxt/ui','@nuxt/image','@nuxt/content'],
   css: ['@/assets/css/main.css'],
+  app: {
+    head: {
+      titleTemplate: '%s\t|\tMatteo Secco',
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+      meta: [
+        {name: 'author', content: 'Matteo Secco'},
+      ]
+    },
+  },
   ui: {
     theme: {
       colors: [

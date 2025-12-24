@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <HeroPage/>
+  <GridPage/>
 </template>
 
 <style scoped>

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <HeroPage/>
+<HeroPage/>
 </template>
 
 <style scoped>
