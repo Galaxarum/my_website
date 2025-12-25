@@ -26,8 +26,6 @@ function parse_item(item: Item) {
 }
 
 const { data, status, error } = await useFetch(`https://api.zotero.org/users/${USER_ID}/publications/items`, {
-  server: false,
-  lazy: true,
   query: {
     format: 'csljson',
     sort: 'date',
