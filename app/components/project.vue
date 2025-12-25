@@ -32,6 +32,7 @@ const avatar = project.icon==null?undefined:{
     </template>
     <template #footer>
       {{projectSpan}}
+      <!--TODO: also add related pages-->
     </template>
   </UPageCard>
 </template>

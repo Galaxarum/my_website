@@ -20,9 +20,9 @@ useSeoMeta({
     >
       <NuxtImg v-if="page?.image" :src="page.image" :alt="page.image_alt??`Image of ${page.title}`" preload />
     </UPageHeader>
-    <UPageSection>
+    <UPageBody>
       <ContentRenderer v-if="page" :value="page"/>
-    </UPageSection>
+    </UPageBody>
   </UPage>
 </template>
 

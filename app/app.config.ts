@@ -23,8 +23,11 @@ export default defineAppConfig({
         },
         pageHeader: {
             slots: {
-                root: 'relative border-none py-8 px-5'
+                root: 'relative border-none pt-8 pb-0 px-5'
             }
+        },
+        pageBody:{
+            base: 'px-5'
         }
     },
 })

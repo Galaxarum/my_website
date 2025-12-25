@@ -3,4 +3,5 @@ side: true
 link: https://i3lab.polimi.it/
 icon: https://i3lab.polimi.it/wp-content/uploads/2020/06/cropped-logo_single-32x32.png
 year_from: 2022
-
+description: Managed the server infrastructure and CI/CD of all the projects conducted by the I3Lab, ensuring consistent
+              availability at all times.
